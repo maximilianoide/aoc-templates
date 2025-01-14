@@ -1,4 +1,3 @@
-```markdown
 # AoC-templates
 
 A command-line tool to streamline your Advent of Code workflow. Download inputs, run solutions, track progress, and more—all from the terminal.
@@ -51,5 +50,4 @@ Open an issue on [GitHub](https://github.com/yourusername/advent-of-code-cli/iss
 ---
 
 Happy coding! 🎄
-```
 
