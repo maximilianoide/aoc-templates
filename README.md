@@ -11,7 +11,6 @@ A command-line tool to streamline your Advent of Code workflow. Download inputs,
    ```bash
    git clone https://github.com/maximilianoide/aoc-templates.git
    cd aoc-templates
-   ```
 
 2. Install dependencies:
    ```bash
