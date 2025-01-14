@@ -1,0 +1,58 @@
+# Ignore the Advent of Code session cookie and leaderboard ID
+.aoc_config.yml
+
+# Ignore cached input and description files
+.aoc_cache/
+
+# Ignore local progress tracking (if you still have it)
+progress.json
+
+# Ignore editor-specific files
+.vscode/
+.ruby-lsp/
+.idea/
+*.swp
+*.swo
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Ruby-specific files
+/.bundle/:sqlite3
+/vendor/bundle
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+
+# Ignore log files and databases
+*.log
+*.sqlite3
+
+# Ignore environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Ignore npm/yarn dependencies
+node_modules/
+yarn-error.log
+
+# Ignore Go build artifacts
+/bin/
+/pkg/
+/out/
+
+# Ignore Python virtual environments
+venv/
+ENV/

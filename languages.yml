@@ -1,0 +1,225 @@
+ruby:
+  extension: rb
+  run_command: ruby
+  solution_template: |
+    # Advent of Code {year} - Day {day} - Part {part}
+
+    input = File.read(File.join(__dir__, 'input.txt')).strip
+
+    def solve(input)
+      # TODO: Implement solution
+    end
+
+    puts solve(input)
+
+javascript:
+  extension: js
+  run_command: bun
+  solution_template: |
+    import { readFileSync } from 'fs';
+    import { join } from 'path';
+    import { parseInput } from '../lib/helper.js';
+
+    const input = readFileSync(join(__dirname, 'input.txt'), 'utf-8').trim();
+
+    // Advent of Code {year} - Day {day} - Part {part}
+
+    function solve(input) {
+      // TODO: Implement solution
+    }
+
+    const answer = solve(input);
+    console.log(`Answer: ${answer}`);
+
+go:
+  extension: go
+  run_command: go run
+  solution_template: |
+    package main
+
+    import (
+        "flag"
+        "fmt"
+        "os"
+    )
+
+    func main() {
+        part := flag.Int("part", 1, "Part of the puzzle to solve (1 or 2)")
+        flag.Parse()
+
+        input := readInput("input.txt")
+
+        switch *part {
+        case 1:
+            fmt.Println(solvePart1(input))
+        case 2:
+            fmt.Println(solvePart2(input))
+        default:
+            fmt.Println("Invalid part specified. Use 1 or 2.")
+        }
+    }
+
+    func readInput(filename string) string {
+        data, err := os.ReadFile(filename)
+        if err != nil {
+            panic(err)
+        }
+        return string(data)
+    }
+
+    func solvePart1(input string) int {
+        // TODO: Implement part 1 solution
+        return 0
+    }
+
+    func solvePart2(input string) int {
+        // TODO: Implement part 2 solution
+        return 0
+    }
+
+python:
+  extension: py
+  run_command: python
+  solution_template: |
+    # Advent of Code {year} - Day {day} - Part {part}
+
+    with open('input.txt', 'r') as file:
+        input = file.read().strip()
+
+    def solve(input):
+        # TODO: Implement solution
+        pass
+
+    print(solve(input))
+
+elixir:
+  extension: exs
+  run_command: elixir
+  solution_template: |
+    # Advent of Code {year} - Day {day} - Part {part}
+
+    input = File.read!("input.txt") |> String.trim()
+
+    defmodule AOC do
+      def solve(input) do
+        # TODO: Implement solution
+        0
+      end
+    end
+
+    IO.puts("Part {part}: #{AOC.solve(input)}")
+
+c:
+  extension: c
+  run_command: gcc -o solution && ./solution
+  solution_template: |
+    #include <stdio.h>
+    #include <stdlib.h>
+
+    // Advent of Code {year} - Day {day} - Part {part}
+
+    char* read_input(const char* filename) {
+        FILE* file = fopen(filename, "r");
+        if (!file) {
+            perror("Failed to open file");
+            exit(1);
+        }
+
+        fseek(file, 0, SEEK_END);
+        long length = ftell(file);
+        fseek(file, 0, SEEK_SET);
+
+        char* buffer = malloc(length + 1);
+        if (!buffer) {
+            perror("Failed to allocate memory");
+            exit(1);
+        }
+
+        fread(buffer, 1, length, file);
+        buffer[length] = '\0';
+
+        fclose(file);
+        return buffer;
+    }
+
+    int solve(const char* input) {
+        // TODO: Implement solution
+        return 0;
+    }
+
+    int main() {
+        char* input = read_input("input.txt");
+        int answer = solve(input);
+        printf("Answer: %d\n", answer);
+        free(input);
+        return 0;
+    }
+
+zig:
+  extension: zig
+  run_command: zig run
+  solution_template: |
+    const std = @import("std");
+
+    // Advent of Code {year} - Day {day} - Part {part}
+
+    fn readInput(allocator: std.mem.Allocator, filename: []const u8) ![]const u8 {
+        const file = try std.fs.cwd().openFile(filename, .{});
+        defer file.close();
+
+        const input = try file.readToEndAlloc(allocator, std.math.maxInt(usize));
+        return input;
+    }
+
+    fn solve(input: []const u8) i32 {
+        // TODO: Implement solution
+        return 0;
+    }
+
+    pub fn main() !void {
+        var arena = std.heap.ArenaAllocator.init(std.heap.page_allocator);
+        defer arena.deinit();
+        const allocator = arena.allocator();
+
+        const input = try readInput(allocator, "input.txt");
+        const answer = solve(input);
+        std.debug.print("Answer: {}\n", .{answer});
+    }
+
+typescript:
+  extension: ts
+  run_command: bun run
+  solution_template: |
+    import { readFileSync } from 'fs';
+    import { join } from 'path';
+
+    const input = readFileSync(join(__dirname, 'input.txt'), 'utf-8').trim();
+
+    // Advent of Code {year} - Day {day} - Part {part}
+
+    function solve(input: string): number {
+      // TODO: Implement solution
+      return 0;
+    }
+
+    const answer = solve(input);
+    console.log(`Answer: ${answer}`);
+
+php:
+  extension: php
+  run_command: php
+  solution_template: |
+    <?php
+    // Advent of Code {year} - Day {day} - Part {part}
+
+    $input = file_get_contents(__DIR__ . '/input.txt');
+    $input = trim($input);
+
+    function solve(string $input): int {
+        // TODO: Implement solution
+        return 0;
+    }
+
+    $answer = solve($input);
+    echo "Answer: $answer\n";
+    ?>
